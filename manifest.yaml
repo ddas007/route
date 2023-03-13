@@ -1,0 +1,19 @@
+applications:
+
+# - name: node-auth-service
+#   instance: 1
+#   buildpacks: 
+#     - nodejs_buildpack
+#   path: srv
+#   routes:
+#     - route: node-auth-service.cfapps.us10-001.hana.ondemand.com 
+#   services:
+#     - xsuaa-node
+
+
+- name: route-approuter
+  random-route: true
+  path: app
+  memory: 128M 
+  services:
+  - route-xsuaa
