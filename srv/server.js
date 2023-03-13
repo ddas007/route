@@ -15,7 +15,7 @@ app.get("/", function (req, res, next) {
   res.send("Welcome User: " + req.user.name.givenName);
 });
 
-const port = process.env.PORT || 4004;
+const port = process.env.PORT || 4001;
 app.listen(port, function () {
   console.log("Basic NodeJs listening on port " + port);
 });
